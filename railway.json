@@ -1,4 +1,15 @@
 {
-  "plugins": ["php"],
-  "start": "php -S 0.0.0.0:$PORT -t api"
+  "build": {
+    "nixpacksPlan": {
+      "providers": ["php"],
+      "phases": {
+        "install": {
+          "cmds": []
+        },
+        "start": {
+          "cmd": "php -S 0.0.0.0:$PORT -t ./api"
+        }
+      }
+    }
+  }
 }
