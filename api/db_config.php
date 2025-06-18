@@ -2,7 +2,7 @@
 // Grab Railway-provided environment variables directly
 $host = getenv("MYSQLHOST") ?: getenv("DB_HOST");
 $port = getenv("MYSQLPORT") ?: getenv("DB_PORT") ?: 3306;
-$db   = getenv("MYSQLDATABASE") ?: getenv("DB_NAME");
+$db   = getenv("MYSQL_DATABASE") ?: getenv("DB_NAME");
 $user = getenv("MYSQLUSER") ?: getenv("DB_USER");
 $pass = getenv("MYSQLPASSWORD") ?: getenv("DB_PASS");
 
