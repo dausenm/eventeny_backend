@@ -4,19 +4,8 @@ require 'db_config.php';
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-file_put_contents("log.txt", file_get_contents("php://input"));
-
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json");
-
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    echo json_encode(["msg" => "Hello from POST"]);
-} else {
-    echo json_encode(["msg" => "Wrong method"]);
-}
 
 // Read the input JSON
 $data = json_decode(file_get_contents("php://input"), true);
