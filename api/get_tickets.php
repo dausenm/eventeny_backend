@@ -12,7 +12,7 @@ if (!isset($_GET['event_id'])) {
 $event_id = $_GET['event_id'];
 
 try {
-    $stmt = $pdo->prepare("SELECT id, type, price, quantity_available FROM tickets WHERE event_id = ?");
+    $stmt = $pdo->prepare("SELECT id, event_id, type, price, quantity_available FROM tickets WHERE event_id = ?");
     $stmt->execute([$event_id]);
     $tickets = $stmt->fetchAll();
 
