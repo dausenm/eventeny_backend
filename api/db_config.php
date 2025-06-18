@@ -15,5 +15,5 @@ try {
     echo json_encode(["error" => "Database connection failed", "details" => $e->getMessage()]);
     exit;
 }
-?>
+
 
